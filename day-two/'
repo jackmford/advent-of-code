@@ -1,0 +1,42 @@
+def shape_points(line):
+    if 'X' in line:
+        print('Add 1 for shape')
+        return 1
+    elif 'Y' in line:
+        print('Add 2 for shape')
+        return 2
+    else:
+        print('Add 3 for shape')
+        return 3
+
+def winner(line):
+    if line[0] == line[2]:
+        print('Tie')
+        return 3
+    elif line[2] == 'X' and line[0] == 'C':
+        return 6
+    elif line[2] == 'Y' and line[0] == 'A':
+        return 6
+    elif line[2] == 'Z' and line[0] == 'B':
+        return 6
+
+    return 0
+    
+if __name__ == '__main__':
+    # X = 1 point
+    # Y = 2 points
+    # Z = 3 points
+
+    # X defeats C 
+    # Y defeats A 
+    # Z defeats B 
+
+    total_score = 0
+
+    f = open('input-test.txt', 'r')
+
+    for line in f: 
+       total_score += shape_points(line)
+       total_score += winner(line)
+
+print(total_score)
