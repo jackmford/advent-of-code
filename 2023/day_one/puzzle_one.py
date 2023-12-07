@@ -1,5 +1,5 @@
 def read_nums(line):
-    i, j = 0, len(line)
+    i, j = 0, len(line)-1
     num_one, num_two = '', ''
 
     while i <= j:
@@ -13,6 +13,9 @@ def read_nums(line):
             num_two = int(line[j])
         except:
             j = j-1
+
+    if num_one == '' and num_two == '':
+        return 0
 
     return int(f"{num_one}{num_two}")
 
