@@ -1,3 +1,5 @@
+# Solution without using regex
+
 def check_for_word(word):
     word_nums = {
         'one': 1,
