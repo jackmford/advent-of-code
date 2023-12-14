@@ -1,3 +1,4 @@
+# Solutions 1 and 2
 def read_nums(line):
     i, j = 0, len(line)-1
     num_one, num_two = '', ''
